@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "电台",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "banner": "/pages/radio/component/banner",
+    "recommend": "/pages/radio/component/recommend"
+  }
+}

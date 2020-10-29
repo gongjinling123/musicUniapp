@@ -1,0 +1,21 @@
+
+.video{
+	padding-left: 20rpx;
+	box-sizing: border-box;
+}
+.scroll-view{
+	width: 750rpx;
+	margin-right: -20rpx;
+	margin-top: 200rpx;
+	white-space: nowrap;
+	/* background-color: pink; */
+}
+.scroll-item{
+	display: inline-block;
+	/* width: 100rpx; */
+	height: 90rpx;
+	padding: 0 20rpx;
+	text-align: center;
+	line-height: 90rpx;
+}
+

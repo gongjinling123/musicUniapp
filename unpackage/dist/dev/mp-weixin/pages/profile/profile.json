@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tab": "/components/tab/tab",
+    "local-music": "/pages/profile/component/localMusic",
+    "song-recommend": "/pages/profile/component/songRecommend"
+  }
+}

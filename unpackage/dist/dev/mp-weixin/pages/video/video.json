@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "视频",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tab": "/components/tab/tab"
+  }
+}

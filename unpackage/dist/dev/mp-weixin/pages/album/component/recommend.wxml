@@ -1,0 +1,1 @@
+<view class="recommend"><block wx:for="{{recommend}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block><view data-event-opts="{{[['tap',[['handleItem',[index]]]]]}}" class="recommend-item" bindtap="__e"><view class="item-img"><image src="{{item.img}}" mode></image></view><text>{{item.title}}</text></view></block></block></view>

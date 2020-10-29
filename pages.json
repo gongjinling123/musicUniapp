@@ -1,0 +1,262 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path":"pages/video/video",
+			"style":{
+				"navigationBarTitleText":"视频",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/record/record",
+			"style":{
+				"navigationBarTitleText":"最近播放",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/songsDetail/songsDetail",
+			"style":{
+				"navigationBarTitleText":"歌单",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/follows/follows",
+			"style":{
+				"navigationBarTitleText":"关注",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/userDetail/userDetail",
+			"style":{
+				"navigationBarTitleText":"用户详情",
+				"navigationStyle":"custom"
+			}
+		},
+		
+	
+		{
+			"path":"pages/songsaleboard/songsaleboard",
+			"style":{
+				"navigationBarTitleText":"畅销榜",
+				"navigationStyle":"custom"
+			}
+		},   
+		{
+			"path":"pages/todayDj/todayDj",
+			"style":{ 
+				"navigationBarTitleText":"今日推荐电台",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/songsList/songsList",
+			"style":{
+				"navigationBarTitleText":"歌单",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/playList/playList",
+			"style":{
+				"navigationBarTitleText":"排行榜",
+				"navigationStyle":"custom"
+			}
+		},
+	
+		{
+			"path":"pages/rankList/rankList",
+			"style":{
+				"navigationBarTitleText":"排行榜",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/message/message",
+			"style":{
+				"navigationBarTitleText":"私信",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/fans/fans",
+			"style":{
+				"navigationBarTitleText":"粉丝",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/message/child/writeMessage",
+			"style":{
+				"navigationBarTitleText":"写私信",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/message/child/userMessage",
+			"style":{
+				"navigationBarTitleText":"聊天室",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		
+		{
+			"path":"pages/yunComment/yunComment",
+			"style":{
+				"navigationBarTitleText":"云村热评",
+				"navigationStyle":"custom"
+			}
+		},
+	
+		{
+			"path":"pages/album/album",
+			"style":{
+				"navigationBarTitleText":"数字专辑",
+				"navigationStyle":"custom"
+			}
+		},
+	
+		{
+			"path":"pages/language/language",
+			"style":{
+				"navigationBarTitleText":"语种风格",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/albumDetail/albumDetail",
+			"style":{
+				"navigationBarTitleText":"数字专辑详情",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/like/like",
+			"style":{
+				"navigationBarTitleText":"喜欢的歌曲",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/comment/comment",
+			"style":{
+				"navigationBarTitleText":"评论",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/search/search",
+			"style":{
+				"navigationBarTitleText":"搜索",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/djTopList/djTopList",
+			"style":{
+				"navigationBarTitleText":"电台排行榜",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/radio/radio",
+			"style":{
+				"navigationBarTitleText":"电台",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		
+		{
+			"path":"pages/djPay/djPay",
+			"style":{
+				"navigationBarTitleText":"付费精品",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/hotDj/hotDj",
+			"style":{
+				"navigationBarTitleText":"热门电台",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/djDetail/djDetail",
+			"style":{
+				"navigationBarTitleText":"电台详情",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		
+		{
+			"path":"pages/recommend/recommend",
+			"style":{
+				"navigationBarTitleText":"每日推荐",
+				"navigationStyle":"custom"
+			}
+		},
+		
+		{
+			"path":"pages/recently/recently",
+			"style":{
+				"navigationBarTitleText":"最近播放",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/register/register",
+			"style":{
+				"navigationBarTitleText":"注册"
+			}
+		},
+		{
+			"path":"pages/login/login",
+			"style":{
+				"navigationBarTitleText":"登录",
+				"navigationStyle": "custom"
+			}
+		},
+		
+		{
+			"path":"pages/profile/profile",
+			"style":{
+				"navigationBarTitleText":"我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path":"pages/play/play",
+			"style":{
+				"navigationBarTitleText":"播放",
+				"navigationStyle":"custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

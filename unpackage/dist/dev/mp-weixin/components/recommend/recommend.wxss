@@ -1,0 +1,26 @@
+
+.head-recommend {
+	/* background-color: blue; */
+	margin-top: 30rpx;
+}
+.scroll-x1 {
+	white-space: nowrap;
+	width: 750rpx;
+	margin-right: -20rpx;
+}
+.recommend-item {
+	display: inline-block;
+	width: 100rpx;
+	height: 130rpx;
+	margin-right: 45rpx;
+	text-align: center;
+}
+.recommend-img {
+	width: 80rpx;
+	height: 80rpx;
+	margin: 0 auto;
+}
+.recommend-title {
+	font-size: 22rpx;
+}
+

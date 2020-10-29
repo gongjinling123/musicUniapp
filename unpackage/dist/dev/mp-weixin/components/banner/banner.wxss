@@ -1,0 +1,25 @@
+
+.banner{
+	margin-top: 180rpx;
+	border-radius: 15rpx;
+	overflow: hidden;
+}
+.swiper-banner {
+	height: 250rpx;
+	border-radius: 15rpx;
+	overflow: hidden;
+	position: relative;
+}
+.banners-image {
+	width: 100%;
+}
+.banners-title {
+	position: absolute;
+	right: 2rpx;
+	bottom: 1rpx;
+	font-size: 22rpx;
+	padding: 6rpx;
+	color: #fff;
+	border-radius: 6rpx;
+}
+

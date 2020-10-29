@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "评论",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "comment-item": "/pages/comment/child/commentItem",
+    "uni-popup-message": "/components/uni-popup/uni-popup-message",
+    "uni-popup-dialog": "/components/uni-popup/uni-popup-dialog",
+    "pop-comment": "/pages/comment/child/popComment"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "今日推荐电台",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "detail": "/pages/todayDj/component/detail",
+    "program": "/pages/todayDj/component/program"
+  }
+}

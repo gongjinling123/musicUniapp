@@ -1,0 +1,87 @@
+
+.user-job{
+	width: 100%;
+	height: 60rpx;
+	line-height: 60rpx;
+	margin-left: 20rpx;
+	font-weight: 600;
+}
+.user-row{
+	width: 100%;
+	height: 100rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.user-avatar{
+	width: 100rpx;
+	height: 100rpx;
+	margin-left: 20rpx;
+}
+.user-avatar image{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.user-info{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	margin-left: 20rpx;
+}
+.user-name{
+	font-size: 34rpx;
+}
+.user-desc{
+	font-size: 24rpx;
+	color: #ccc;
+}
+.appreciate{
+	width: 150rpx;
+	height: 100rpx;
+	padding-right: 20rpx;
+	/* background-color: red; */
+}
+.appreciate-box{
+	width: 130rpx;
+	height: 45rpx;
+	border-radius: 50rpx;
+	margin-top: 20rpx;
+	text-align: center;
+	border: 2rpx solid red;
+	color: red;
+}
+.appreciate-box text{
+	font-size: 24rpx;
+}
+.dj-info{
+	width: 100%;
+	height: 400rpx;
+	margin-top: 30rpx;
+	padding-left: 20rpx;
+	box-sizing: border-box;
+	/* background-color: red; */
+}
+.dj-title{
+	font-weight: 600;
+}
+.dj-category{
+	font-size: 28rpx;
+	color: #ccc;
+	margin-top: 20rpx;
+}
+.dj-category text{
+	font-size: 20rpx;
+	padding: 0 8rpx;
+	color: red;
+	border: 1rpx solid red;
+	border-radius: 8rpx;
+}
+.dj-desc{
+	margin-top: 20rpx;
+}
+.dj-desc text{
+	font-size: 28rpx;
+	color: #ccc;
+}
+

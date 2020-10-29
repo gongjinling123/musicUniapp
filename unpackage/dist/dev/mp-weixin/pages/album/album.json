@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "数字专辑",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "banner": "/components/banner/banner",
+    "recommend": "/pages/album/component/recommend",
+    "new-album": "/pages/album/component/newAlbum",
+    "song-sale-bard": "/pages/album/component/songSaleBard"
+  }
+}

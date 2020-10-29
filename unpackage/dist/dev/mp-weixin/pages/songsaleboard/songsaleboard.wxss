@@ -1,0 +1,360 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2099879 */
+  src: url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.eot');
+  src: url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_2099879_jll2mf6pli.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-fenxiang:before {
+  content: "\e601";
+}
+.icon-pinglun1:before {
+  content: "\e607";
+}
+.icon-jiantou-copy:before {
+  content: "\eb56";
+}
+.icon-jiantou:before {
+  content: "\e69b";
+}
+.icon-daohanglan-05:before {
+  content: "\e639";
+}
+.icon-fasong:before {
+  content: "\e60c";
+}
+.icon-quotation:before {
+  content: "\e67b";
+}
+.icon-zan:before {
+  content: "\e619";
+}
+.icon-pinglun:before {
+  content: "\e6d7";
+}
+.icon-shoucang:before {
+  content: "\e658";
+}
+.icon-remen:before {
+  content: "\e617";
+}
+.icon-ziyuan1:before {
+  content: "\e611";
+}
+.icon-zaixiankefu:before {
+  content: "\e615";
+}
+.icon-ding_huabanfuben:before {
+  content: "\e61e";
+}
+.icon-fanhui1:before {
+  content: "\e605";
+}
+.icon-fanhui1-copy:before {
+  content: "\eb54";
+}
+.icon-fanhui1-copy-copy:before {
+  content: "\eb55";
+}
+.icon-erji-dingshirenwu:before {
+  content: "\eaae";
+}
+.icon-tianmaohuopiaotongxing:before {
+  content: "\e600";
+}
+.icon-94:before {
+  content: "\e67e";
+}
+.icon-guanyu:before {
+  content: "\e609";
+}
+.icon-iconset0143:before {
+  content: "\e62a";
+}
+.icon-shezhi:before {
+  content: "\e667";
+}
+.icon-tuichu:before {
+  content: "\e614";
+}
+.icon-icon-test:before {
+  content: "\e632";
+}
+.icon-youhuiquan:before {
+  content: "\e60f";
+}
+.icon-deng:before {
+  content: "\eb53";
+}
+.icon-saoma:before {
+  content: "\e65d";
+}
+.icon-wuraomoshi:before {
+  content: "\e60b";
+}
+.icon-yifu:before {
+  content: "\e62e";
+}
+.icon-lingdang:before {
+  content: "\e636";
+}
+.icon-ziyuan:before {
+  content: "\e61b";
+}
+.icon-icon-test1:before {
+  content: "\e618";
+}
+.icon-yunyinle-:before {
+  content: "\e610";
+}
+.icon-gouwuche:before {
+  content: "\e633";
+}
+.icon-dingshi:before {
+  content: "\e77e";
+}
+.icon-xiansanqingshaonian:before {
+  content: "\e613";
+}
+.icon-hipster2:before {
+  content: "\e7c5";
+}
+.icon-fanhui:before {
+  content: "\e612";
+}
+.icon-mima:before {
+  content: "\e654";
+}
+.icon-yanzhengma2:before {
+  content: "\e656";
+}
+.icon-youxiang:before {
+  content: "\e774";
+}
+.icon-search:before {
+  content: "\e616";
+}
+.icon-gengduo:before {
+  content: "\e66c";
+}
+.icon-guanbi:before {
+  content: "\e608";
+}
+.icon-shangchuan:before {
+  content: "\e663";
+}
+.icon-download:before {
+  content: "\e625";
+}
+.icon-kefu:before {
+  content: "\e65e";
+}
+.icon-dagou:before {
+  content: "\e621";
+}
+.icon-guanzhu:before {
+  content: "\e660";
+}
+.icon-bofang1:before {
+  content: "\e61c";
+}
+.icon-guanzhu1:before {
+  content: "\e604";
+}
+.icon-bofang:before {
+  content: "\e6f6";
+}
+.icon-arrow-:before {
+  content: "\e624";
+}
+.songsaleboard{
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	/* background-color: #007AFF; */
+}
+.tab{
+	padding-top: 50rpx;
+	width: 100%;
+	height: 90rpx;
+	line-height: 90rpx;
+	padding-left: 20rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background-color: #fff;
+}
+.icon-tab{
+	font-size: 50rpx;
+	margin-right: 20rpx;
+	vertical-align: middle;
+}
+.tab-title{
+	font-size: 30rpx;
+	font-weight: 600;
+}
+.select{
+	width: 60%;
+	height: 50rpx;
+	margin: 140rpx auto 0;
+	border-radius: 50rpx;
+	font-size: 26rpx;
+	border: 2rpx solid #CECECE;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.select-item{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.active{
+	border-radius: 50rpx;
+	background-color: #999999;
+	color: #fff;
+}
+.type{
+	width: 100%;
+	height: 90rpx;
+	margin-top: 20rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	border-top: 1rpx solid #EAEAEA;
+	border-bottom: 1rpx solid #EAEAEA;
+}
+.type-item{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.type-item text{
+	padding: 0 16rpx 30rpx;
+}
+.active-type{
+	border-bottom: 4rpx solid #C02D2F;
+	color: #C02D2F;
+}
+.songsaleboard-content{
+	width: 100%;
+	height: 900rpx;
+	/* background-color: #007AFF; */
+	margin-top: 20rpx;
+}
+.content-item{
+	width: 96%;
+	height: 150rpx;
+	margin: 10rpx auto;
+	/* background-color: red; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.content-index{
+	width: 90rpx;
+	height: 150rpx;
+	line-height: 150rpx;
+	text-align: center;
+	color: #969696;
+	/* background-color: red; */
+}
+.hotIndex{
+	font-weight: 600;
+	color: #CF3532;
+}
+.content-img{
+	width: 150rpx;
+	height: 150rpx;
+}
+.content-img image{
+	width: 100%;
+	height: 100%;
+}
+.content-desc{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.song-info{
+	width: 340rpx;
+	height: 150rpx;
+	margin-left: 20rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.song-name{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #3A3A3A;
+}
+.singer-name{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	font-size: 24rpx;
+	color: #838383;
+}
+.saleNum{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	font-size: 24rpx;
+	color: #838383;
+}
+.supper{
+	width: 120rpx;
+	height: 150rpx;
+	padding: 50rpx 15rpx;
+	box-sizing: border-box;
+	/* background-color: pink; */
+}
+.supper text{
+	padding: 4rpx 18rpx;
+	font-size: 26rpx;
+	border-radius: 50rpx;
+	color: #A84951;
+	border: 2rpx solid #A84951;
+}
+

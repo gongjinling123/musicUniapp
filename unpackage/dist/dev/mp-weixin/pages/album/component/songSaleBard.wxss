@@ -1,0 +1,134 @@
+
+.number-album{
+	width: 100%;
+	/* height: 900rpx; */
+	/* background-color: pink; */
+	margin-top: 20rpx;
+	margin-bottom: 50rpx;
+}
+.number-album-title {
+	width: 100%;
+	height: 90rpx;
+	line-height: 90rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	border-bottom: 1rpx solid #E1E5E8;
+}
+.title-left{
+	width: 300rpx;
+	/* background-color: #007AFF; */
+}
+.title-right{
+	width: 300rpx;
+	font-size: 26rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+}
+.title-right text{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	/* border:1px solid red; */
+}
+.active-text{
+	color: #B1483B;
+}
+.number-album-title text{
+	font-weight: 600;
+}
+.scroll-view{
+	width: 750rpx;
+	white-space: nowrap;
+	margin-right: -20rpx;
+	/* border:1px solid pink; */
+}
+.play-body-outside{
+	width: 95%;
+	display: inline-block;
+}
+.songSaleBard-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 20rpx 0;
+	position: relative;
+	border-bottom: 1rpx solid #E1E5E8;
+}
+.songSaleBard-item-img{
+	width: 120rpx;
+	height: 120rpx;
+	margin-right: 20rpx;
+}
+.songSaleBard-item-img image{
+	width: 100%;
+	height: 100%;
+}
+.songSaleBard-item-desc{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.songSaleBard-item-index{
+	width: 60rpx;
+	height: 120rpx;
+	line-height: 120rpx;
+	text-align: center;
+	font-weight: 600;
+	color: #6B6B6B;
+}
+.songSaleBard-item-name{
+	font-size: 28rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.song-name{
+	width: 260rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	/* background-color: #007AFF; */
+}
+.singer-name{
+	color: #8E8E8E;
+}
+.songSaleBard-item-btn{
+	width: 120rpx;
+	height: 120rpx;
+	position: absolute;
+	top: 0;
+	right: 10rpx;
+}
+.songSaleBard-item-btn text{
+	width: 110rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	margin: 40rpx auto;
+	font-size: 26rpx;
+	text-align: center;
+	border-radius: 50rpx;
+	display: block;
+	color: #A63D3F;
+	border: 2rpx solid #A63D3F;
+}
+

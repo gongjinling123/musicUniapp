@@ -1,0 +1,63 @@
+
+.song-recommend-row {
+	width: 90%;
+	margin: 20rpx auto;
+	border-radius: 20rpx;
+	background-color: #fff;
+}
+.recommend-head {
+	height: 90rpx;
+	line-height: 90rpx;
+	padding: 0 30rpx;
+	/* background-color: red; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.recommend-title {
+	font-size: 32rpx;
+	font-weight: 900;
+}
+.close {
+	font-size: 30rpx;
+	color: #999;
+}
+.recommend-body {}
+.recommend-item {
+	height: 150rpx;
+	/* border: 1px solid green; */
+	margin-bottom: 10rpx;
+	padding: 15rpx 20rpx;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.recommend-img {
+	width: 120rpx;
+	height: 120rpx;
+}
+.recommend-img image {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 20rpx;
+}
+.recommend-info {
+	height: 90rpx;
+	margin: 15rpx 20rpx;
+}
+.listname {
+	width: 480rpx;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 34rpx;
+}
+.desc {
+	font-size: 30rpx;
+	color: #ccc;
+}
+

@@ -1,0 +1,1 @@
+<view class="fans"><view data-event-opts="{{[['tap',[['handleBack',['$event']]]]]}}" class="tab" bindtap="__e"><text class="iconfont icon-fanhui icon-tab"></text><text class="tab-title">粉丝</text></view><view class="fans-body">123</view></view>

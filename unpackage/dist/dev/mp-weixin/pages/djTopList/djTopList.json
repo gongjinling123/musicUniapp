@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "电台排行榜",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tab": "/pages/djTopList/component/tab",
+    "list": "/pages/djTopList/component/list",
+    "hours": "/pages/djTopList/component/hours",
+    "poplist": "/pages/djTopList/component/poplist",
+    "anchor": "/pages/djTopList/component/anchor",
+    "paypop": "/pages/djTopList/component/paypop"
+  }
+}
