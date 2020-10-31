@@ -73,6 +73,24 @@ export function getSendComment(cookie,t,type,id,content,commentId){
 	})
 }
 
+// 删除评论
+// t:0 删除
+// type:0:歌曲；1：mv;2:歌单；3：专辑；4：电台；5：视频；6：动态
+// id:对应资源 id
+// commentId :评论的id
+export function getDelComment(cookie,t,type,id,commentId){
+	return request({
+		url:'/comment',
+		data:{
+			cookie,
+			t,
+			type,
+			id,
+			commentId
+		}
+	})
+}
+
 // 楼层评论（回复评论）
 //parentCommentId:楼层评论id
 // id：资源id

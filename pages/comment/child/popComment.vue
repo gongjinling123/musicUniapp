@@ -29,7 +29,7 @@
 				<view class="commentAll-top">全部回复</view>
 				<view class="commentAll-body">
 					<block v-for="(item,index) in reversionComments" :key='index'>
-						<view class="comment-item">
+						<view class="comment-item" @longtap.stop='longtap(item.user.userId,item.content,item.commentId)'>
 							<view class="user-info">
 								<view class="user-img">
 									<image :src="item.user.avatarUrl"></image>
@@ -55,9 +55,24 @@
 			</view>
 		</scroll-view>
 		<view class="sendComment">
-			<textarea value="" placeholder='随乐而起,有感而发' v-model="msg"/>
+			<textarea value="" placeholder='随乐而起,有感而发' v-model="msg"  @longtap='handleCopy'/>
 			<text class="iconfont icon-fasong" @click="handleSend"></text>
 		</view>
+		
+		<uni-popup ref="theirPopup" type="center">
+			<view class="toast">
+				<block v-for="(item,index) in theirComment" :key='index'>
+					<view class="toast-item" @click="handleToastItem(index)">{{item}}</view>
+				</block>
+			</view>
+		</uni-popup>
+		<uni-popup ref="myPopup" type="center">
+			<view class="toast">
+				<block v-for="(item,index) in myComment" :key='index'>
+					<view class="toast-item" @click="handleToastItem(index)">{{item}}</view>
+				</block>
+			</view>
+		</uni-popup>
 	</view>
 </template>
 
@@ -65,7 +80,12 @@
 	export default{
 		data(){
 			return {
-				msg:''
+				msg:'',
+				theirComment:['赞赏评论','复制评论'],
+				myComment:['赞赏评论','复制评论','删除评论'],
+				commentId:'',
+				contentComment:'',
+				myId:uni.getStorageSync('userId')
 			}
 		}, 
 		props:{
@@ -105,7 +125,37 @@
 			},
 			handleZan(commentId){
 				this.$emit('handleZan',commentId)
-			}
+			},
+			longtap(id,content,commentId){
+				this.commentId=commentId
+				this.contentComment=content
+				if(id==this.myId){
+					this.$refs.myPopup.open()
+				}else{
+					this.$refs.theirPopup.open()
+				}
+			},
+			handleToastItem(index){
+				switch(index){
+					case 0:{
+						this.$emit('handleZanComment',this.commentId)
+						break
+					}
+					case 1:{
+						this.$emit('handleComment',this.contentComment)
+						break
+					}
+					case 2:{
+						this.$emit('handleDel',this.commentId)
+						break
+					}
+				}
+				this.$refs.myPopup.close()
+				this.$refs.theirPopup.close()
+			},
+			handleCopy(){
+				this.msg=this.contentComment
+			},
 		}
 	}
 </script>
@@ -216,5 +266,17 @@
 	}
 	.active{
 		color: red;
+	}
+	.toast{
+		width: 300rpx;
+		padding: 20rpx;
+		background-color: #fff;
+		border-radius: 20rpx;
+	}
+	.toast-item{
+		width: 100%;
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 26rpx;
 	}
 </style>

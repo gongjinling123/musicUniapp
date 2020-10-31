@@ -1,7 +1,9 @@
 <template>
 	<view class="">
 		<block v-for="(item,index) in comments" :key='index'>
-			<view class="comment-item" @click="handleComItem(item.commentId,item.user.nickname)">
+			<view class="comment-item" 
+					  @click="handleComItem(item.commentId,item.user.nickname)"
+						@longtap.stop='longtap(item.user.userId,item.content,item.commentId)'>
 				<view class="user-info">
 					<view class="user-img">
 						<image :src="item.user.avatarUrl"></image>
@@ -9,7 +11,10 @@
 					<view class="user-name">
 						{{item.user.nickname}}
 					</view>
-					<view class="likedCount" @click.stop="handleZan(item.commentId)" :class="commentSupper.indexOf(item.commentId)!=-1?'active':''">
+					<view 
+								class="likedCount" 
+								@click.stop="handleZan(item.commentId)" 
+								:class="commentSupper.indexOf(item.commentId)!=-1?'active':''">
 						<block v-if="item.likedCount!=0">
 							<text>{{item.likedCount}}</text>
 						</block>
@@ -25,14 +30,35 @@
 				</view>
 			</view>
 		</block>
+		<uni-popup ref="theirPopup" type="center">
+			<view class="toast">
+				<block v-for="(item,index) in theirComment" :key='index'>
+					<view class="toast-item" @click="handleToastItem(index)">{{item}}</view>
+				</block>
+			</view>
+		</uni-popup>
+		<uni-popup ref="myPopup" type="center">
+			<view class="toast">
+				<block v-for="(item,index) in myComment" :key='index'>
+					<view class="toast-item" @click="handleToastItem(index)">{{item}}</view>
+				</block>
+			</view>
+		</uni-popup>
 	</view>
 </template>
 
 <script>
+	import uniPopup from '@/components/uni-popup/uni-popup.vue'
+	import uniPopupMessage from '@/components/uni-popup/uni-popup-message.vue'
+	import uniPopupDialog from '@/components/uni-popup/uni-popup-dialog.vue'
 	export default {
 		data() {
-			return {
-
+			return {  
+				myId:uni.getStorageSync('userId'),
+				theirComment:['赞赏评论','复制评论'],
+				myComment:['赞赏评论','复制评论','删除评论'],
+				commentId:'',
+				content:''
 			}
 		},
 		methods: {
@@ -44,6 +70,33 @@
 			},
 			handleZan(commentId) {
 				this.$emit('handleZan', commentId)
+			},
+			longtap(id,content,commentId){
+				this.commentId=commentId
+				this.content=content
+				if(id==this.myId){
+					this.$refs.myPopup.open()
+				}else{
+					this.$refs.theirPopup.open()
+				}
+			},
+			handleToastItem(index){
+				switch(index){
+					case 0:{
+						this.$emit('handleZanComment',this.commentId)
+						break
+					}
+					case 1:{
+						this.$emit('handleComment',this.content)
+						break
+					}
+					case 2:{
+						this.$emit('handleDel',this.commentId)
+						break
+					}
+				}
+				this.$refs.myPopup.close()
+				this.$refs.theirPopup.close()
 			}
 		},
 		props: {
@@ -125,5 +178,18 @@
 
 	.active {
 		color: red;
+	}
+	
+	.toast{
+		width: 300rpx;
+		padding: 20rpx;
+		background-color: #fff;
+		border-radius: 20rpx;
+	}
+	.toast-item{
+		width: 100%;
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 26rpx;
 	}
 </style>

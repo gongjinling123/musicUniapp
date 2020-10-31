@@ -38,7 +38,10 @@
 								:commentSupper='commentSupper'
 								@handleComItem='handleComItem' 
 								@handleMore='handleMore'
-								@handleZan='handleZan'/>
+								@handleZan='handleZan'
+								@handleDel='handleDel'
+								@handleZanComment='handleZanComment'
+								@handleComment='handleComment'/>
 			</block>
 			<block v-if="currentIndex==1">
 				<comment-item 
@@ -46,7 +49,10 @@
 								:commentSupper='commentSupper'
 								@handleComItem='handleComItem' 
 								@handleMore='handleMore'
-								@handleZan='handleZan'/>
+								@handleZan='handleZan'
+								@handleDel='handleDel'
+								@handleZanComment='handleZanComment'
+								@handleComment='handleComment'/>
 			</block>
 			<block v-if="currentIndex==2">
 				<comment-item 
@@ -54,10 +60,13 @@
 								:commentSupper='commentSupper'
 								@handleComItem='handleComItem' 
 								@handleMore='handleMore'
-								@handleZan='handleZan'/>
+								@handleZan='handleZan'
+								@handleDel='handleDel'
+								@handleZanComment='handleZanComment'
+								@handleComment='handleComment'/>
 			</block>
 			<view class="sendComment">
-				<textarea value="" :placeholder="userName==''?'随乐而起,有感而发':userName" v-model="msg"/>
+				<textarea :placeholder="userName==''?'随乐而起,有感而发':userName" v-model="msg" @longtap='handleCopy'/>
 				<text class="iconfont icon-fasong" @click="handleSend"></text>
 			</view>
 		</view>
@@ -71,9 +80,12 @@
 						:likedCount='likedCount'
 						:reversionComments='reversionComments'
 						:commentSupper='commentSupper'
-						@handleSend='handleSend'
+						@handleSend='handleSendPopup'
 						@closePop='closePop'
-						@handleZan='handleZan'/>
+						@handleZan='handleZan'
+						@handleDel='handleDel'
+						@handleZanComment='handleZanComment'
+						@handleComment='handleComment'/>
 		</uni-popup>
 	</view>
 </template>
@@ -84,6 +96,7 @@
 		getComment,
 		getHotComment,
 		getSendComment,
+		getDelComment,
 		getParentComment,
 		getCommentLike} from '../../service/play.js'
 	import commentItem from './child/commentItem.vue'
@@ -113,7 +126,8 @@
 				likedCount:'',
 				reversionComments:[],
 				reversionId:'',
-				commentSupper:uni.getStorageSync('commentSupper')||[]
+				commentSupper:uni.getStorageSync('commentSupper')||[],
+				copyContent:''
 			}
 		},
 		onLoad(option) {
@@ -169,7 +183,7 @@
 				this.reversionId=id
 				this._getParentComment(id,this.musicId,0)
 			},
-			handleSend(msg){
+			handleSendPopup(msg){
 				this._getSendComment(uni.getStorageSync('login_token'),2,0,this.musicId,msg,this.reversionId)
 			},
 			closePop(){
@@ -178,7 +192,6 @@
 			handleZan(commentId){
 				let commentSupper=uni.getStorageSync('commentSupper')||[]
 				let index=commentSupper.indexOf(commentId)
-				console.log(commentId,'commentId')
 				if(index!=-1){
 					commentSupper.splice(index,1)
 					uni.setStorageSync('commentSupper',commentSupper)
@@ -198,6 +211,20 @@
 				}
 				this.commentSupper=commentSupper
 			},
+			handleDel(id){
+				this._getDelComment(uni.getStorageSync('login_token'),0,0,this.musicId,id)
+			},
+			handleComment(content){
+				console.log('handleComment','复制评论',content)
+				this.copyContent=content
+			},
+			handleZanComment(id){
+				this.handleZan(id)
+			},
+			handleCopy(){
+				console.log('longtap',this.copyContent)
+				this.msg=this.copyContent
+			},
 			//-----------------网络请求------------------------------
 			_getSongDetail(ids){
 				getSongDetail(ids).then(res=>{
@@ -209,8 +236,7 @@
 			},
 			_getComment(id){
 				getComment(id).then(res=>{
-					console.log(id,'id')
-					// console.log(res.data.comments,'------------------------------------')
+					console.log(res.data.comments,'------------------------------------')
 					this.total=res.data.total
 					this.newComments=res.data.comments
 					this.comments=res.data.hotComments
@@ -223,14 +249,14 @@
 				})
 			},
 			// 发送评论
-			// t:1 发送；2 回复
+			// t:1 发送；2 回复；0 删除
 			// type:0:歌曲；1：mv;2:歌单；3：专辑；4：电台；5：视频；6：动态
 			// id:对应资源 id
 			// content :要发送的内容
 			// commentId :回复的评论id (回复评论时必填)
 			_getSendComment(cookie,t,type,id,content,commentId){
 				getSendComment(cookie,t,type,id,content,commentId).then(res=>{
-					// console.log(res)
+					console.log(res)
 					if(res.data.code==200){
 						this.msg=''
 						this.userName=''
@@ -241,6 +267,16 @@
 						uni.showToast({
 							title:'发表失败，请稍后再试',
 							icon:'none'
+						})
+					}
+				})
+			},
+			_getDelComment(cookie,t,type,id,commentId){
+				getDelComment(cookie,t,type,id,commentId).then(res=>{
+					// console.log(res,'getDelComment')
+					if(res.data.code==200){
+						uni.showToast({
+							title:'删除成功'
 						})
 					}
 				})

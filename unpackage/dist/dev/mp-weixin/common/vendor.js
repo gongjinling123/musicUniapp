@@ -2131,7 +2131,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.BaseURL = 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getSongDetail = getSongDetail;exports.getSongUrl = getSongUrl;exports.getLyric = getLyric;exports.getComment = getComment;exports.getHotComment = getHotComment;exports.getSendComment = getSendComment;exports.getParentComment = getParentComment;exports.getCommentLike = getCommentLike;var _network = _interopRequireDefault(__webpack_require__(/*! ./network.js */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.getSongDetail = getSongDetail;exports.getSongUrl = getSongUrl;exports.getLyric = getLyric;exports.getComment = getComment;exports.getHotComment = getHotComment;exports.getSendComment = getSendComment;exports.getDelComment = getDelComment;exports.getParentComment = getParentComment;exports.getCommentLike = getCommentLike;var _network = _interopRequireDefault(__webpack_require__(/*! ./network.js */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 // 获取歌曲详情
 function getSongDetail(ids) {
@@ -2201,6 +2201,24 @@ function getSendComment(cookie, t, type, id, content, commentId) {
       type: type,
       id: id,
       content: content,
+      commentId: commentId } });
+
+
+}
+
+// 删除评论
+// t:0 删除
+// type:0:歌曲；1：mv;2:歌单；3：专辑；4：电台；5：视频；6：动态
+// id:对应资源 id
+// commentId :评论的id
+function getDelComment(cookie, t, type, id, commentId) {
+  return (0, _network.default)({
+    url: '/comment',
+    data: {
+      cookie: cookie,
+      t: t,
+      type: type,
+      id: id,
       commentId: commentId } });
 
 

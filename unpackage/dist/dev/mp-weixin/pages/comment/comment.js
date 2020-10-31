@@ -215,7 +215,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _play = __webpack_require__(/*! ../../service/play.js */ 191);var _methods;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var commentItem = function commentItem() {__webpack_require__.e(/*! require.ensure | pages/comment/child/commentItem */ "pages/comment/child/commentItem").then((function () {return resolve(__webpack_require__(/*! ./child/commentItem.vue */ 396));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var popComment = function popComment() {__webpack_require__.e(/*! require.ensure | pages/comment/child/popComment */ "pages/comment/child/popComment").then((function () {return resolve(__webpack_require__(/*! ./child/popComment.vue */ 403));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 387));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 410));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 417));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -227,184 +226,221 @@ var _play = __webpack_require__(/*! ../../service/play.js */ 191);var _methods;f
 
 
 
-{
-  data: function data() {
-    return {
-      name: '',
-      avatarUrl1: '',
-      singer: '',
-      total: 0,
-      musicId: '',
-      newComments: [], //最新评论
+
+var _play = __webpack_require__(/*! ../../service/play.js */ 191); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var commentItem = function commentItem() {Promise.all(/*! require.ensure | pages/comment/child/commentItem */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/comment/child/commentItem")]).then((function () {return resolve(__webpack_require__(/*! ./child/commentItem.vue */ 396));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var popComment = function popComment() {__webpack_require__.e(/*! require.ensure | pages/comment/child/popComment */ "pages/comment/child/popComment").then((function () {return resolve(__webpack_require__(/*! ./child/popComment.vue */ 417));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopup = function uniPopup() {Promise.all(/*! require.ensure | components/uni-popup/uni-popup */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-popup/uni-popup")]).then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 387));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupMessage = function uniPopupMessage() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-message */ "components/uni-popup/uni-popup-message").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-message.vue */ 401));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniPopupDialog = function uniPopupDialog() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup-dialog */ "components/uni-popup/uni-popup-dialog").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup-dialog.vue */ 408));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { name: '', avatarUrl1: '', singer: '', total: 0, musicId: '', newComments: [], //最新评论
       comments: [], //推荐评论
       hotComments: [], //最热评论
-      navTab: ['最新', '推荐', '最热'],
-      currentIndex: 1,
-      msg: '',
-      commentId: '',
-      userName: '',
-      content: '',
-      avatarUrl: '',
-      nickname: '',
-      likedCount: '',
-      reversionComments: [],
-      reversionId: '',
-      commentSupper: uni.getStorageSync('commentSupper') || [] };
-
-  },
-  onLoad: function onLoad(option) {
-    console.log(option.musicId);
-    this.musicId = option.musicId;
-    this._getSongDetail(option.musicId);
-    this._getComment(option.musicId);
-    this._getHotComment(option.musicId);
-  },
-  components: {
-    commentItem: commentItem,
-    uniPopup: uniPopup,
-    uniPopupMessage: uniPopupMessage,
-    uniPopupDialog: uniPopupDialog,
-    popComment: popComment },
-
-  methods: (_methods = {
-    //-----------------事件监听------------------------------
-    handleBack: function handleBack() {
-      uni.navigateBack({
-        delta: 1 });
-
-    },
-    handleItem: function handleItem(index) {
-      this.currentIndex = index;
-    },
-    handleComItem: function handleComItem(id, userName) {
-      this.commentId = id;
-      if (this.userName == userName) {
-        this.userName = '';
-      } else {
-        this.userName = userName;
-      }
-    },
-    handleSend: function handleSend() {
-      if (this.msg == '') {
+      navTab: ['最新', '推荐', '最热'], currentIndex: 1, msg: '', commentId: '', userName: '', content: '', avatarUrl: '', nickname: '', likedCount: '', reversionComments: [], reversionId: '', commentSupper: uni.getStorageSync('commentSupper') || [], copyContent: '' };}, onLoad: function onLoad(option) {console.log(option.musicId);this.musicId = option.musicId;this._getSongDetail(option.musicId);this._getComment(option.musicId);this._getHotComment(option.musicId);}, components: { commentItem: commentItem, uniPopup: uniPopup, uniPopupMessage: uniPopupMessage, uniPopupDialog: uniPopupDialog, popComment: popComment }, methods: { //-----------------事件监听------------------------------
+    handleBack: function handleBack() {uni.navigateBack({ delta: 1 });}, handleItem: function handleItem(index) {this.currentIndex = index;}, handleComItem: function handleComItem(id, userName) {this.commentId = id;if (this.userName == userName) {this.userName = '';} else {this.userName = userName;}}, handleSend: function handleSend() {if (this.msg == '') {uni.showToast({ title: '请输入评论内容', icon: 'none' });return;}if (this.userName == '') {// 发送评论
+        this._getSendComment(uni.getStorageSync('login_token'), 1, 0, this.musicId, this.msg);} else {// 回复评论
+        this._getSendComment(uni.getStorageSync('login_token'), 2, 0, this.musicId, this.msg, this.commentId);}}, handleMore: function handleMore(id) {this.$refs.popup.open();this.reversionId = id;this._getParentComment(id, this.musicId, 0);}, handleSendPopup: function handleSendPopup(msg) {this._getSendComment(uni.getStorageSync('login_token'), 2, 0, this.musicId, msg, this.reversionId);}, closePop: function closePop() {this.$refs.popup.close();}, handleZan: function handleZan(commentId) {
+      var commentSupper = uni.getStorageSync('commentSupper') || [];
+      var index = commentSupper.indexOf(commentId);
+      if (index != -1) {
+        commentSupper.splice(index, 1);
+        uni.setStorageSync('commentSupper', commentSupper);
+        this._getCommentLike(uni.getStorageSync('login_token'), this.musicId, commentId, 0, 0);
         uni.showToast({
-          title: '请输入评论内容',
+          title: '取消点赞',
           icon: 'none' });
 
-        return;
-      }
-      if (this.userName == '') {
-        // 发送评论
-        this._getSendComment(uni.getStorageSync('login_token'), 1, 0, this.musicId, this.msg);
       } else {
-        // 回复评论
-        this._getSendComment(uni.getStorageSync('login_token'), 2, 0, this.musicId, this.msg, this.commentId);
-      }
-    },
-    handleMore: function handleMore(id) {
-      this.$refs.popup.open();
-      this.reversionId = id;
-      this._getParentComment(id, this.musicId, 0);
-    } }, _defineProperty(_methods, "handleSend", function handleSend(
-  msg) {
-    this._getSendComment(uni.getStorageSync('login_token'), 2, 0, this.musicId, msg, this.reversionId);
-  }), _defineProperty(_methods, "closePop", function closePop()
-  {
-    this.$refs.popup.close();
-  }), _defineProperty(_methods, "handleZan", function handleZan(
-  commentId) {
-    var commentSupper = uni.getStorageSync('commentSupper') || [];
-    var index = commentSupper.indexOf(commentId);
-    console.log(commentId, 'commentId');
-    if (index != -1) {
-      commentSupper.splice(index, 1);
-      uni.setStorageSync('commentSupper', commentSupper);
-      this._getCommentLike(uni.getStorageSync('login_token'), this.musicId, commentId, 0, 0);
-      uni.showToast({
-        title: '取消点赞',
-        icon: 'none' });
-
-    } else {
-      commentSupper.push(commentId);
-      this._getCommentLike(uni.getStorageSync('login_token'), this.musicId, commentId, 1, 0);
-      uni.showToast({
-        title: '点赞',
-        icon: 'none' });
-
-      uni.setStorageSync('commentSupper', commentSupper);
-    }
-    this.commentSupper = commentSupper;
-  }), _defineProperty(_methods, "_getSongDetail", function _getSongDetail(
-
-  ids) {var _this = this;
-    (0, _play.getSongDetail)(ids).then(function (res) {
-      // console.log(res)
-      _this.name = res.data.songs[0].name;
-      _this.avatarUrl1 = res.data.songs[0].al.picUrl;
-      _this.singer = res.data.songs[0].ar[0].name;
-    });
-  }), _defineProperty(_methods, "_getComment", function _getComment(
-  id) {var _this2 = this;
-    (0, _play.getComment)(id).then(function (res) {
-      console.log(id, 'id');
-      // console.log(res.data.comments,'------------------------------------')
-      _this2.total = res.data.total;
-      _this2.newComments = res.data.comments;
-      _this2.comments = res.data.hotComments;
-    });
-  }), _defineProperty(_methods, "_getHotComment", function _getHotComment(
-  id) {var _this3 = this;
-    (0, _play.getHotComment)(id, 0).then(function (res) {
-      // console.log(res)
-      _this3.hotComments = res.data.hotComments;
-    });
-  }), _defineProperty(_methods, "_getSendComment", function _getSendComment(
-
-
-
-
-
-
-  cookie, t, type, id, content, commentId) {var _this4 = this;
-    (0, _play.getSendComment)(cookie, t, type, id, content, commentId).then(function (res) {
-      // console.log(res)
-      if (res.data.code == 200) {
-        _this4.msg = '';
-        _this4.userName = '';
+        commentSupper.push(commentId);
+        this._getCommentLike(uni.getStorageSync('login_token'), this.musicId, commentId, 1, 0);
         uni.showToast({
-          title: '发表成功' });
-
-      } else {
-        uni.showToast({
-          title: '发表失败，请稍后再试',
+          title: '点赞',
           icon: 'none' });
 
+        uni.setStorageSync('commentSupper', commentSupper);
       }
-    });
-  }), _defineProperty(_methods, "_getParentComment", function _getParentComment(
+      this.commentSupper = commentSupper;
+    },
+    handleDel: function handleDel(id) {
+      this._getDelComment(uni.getStorageSync('login_token'), 0, 0, this.musicId, id);
+    },
+    handleComment: function handleComment(content) {
+      console.log('handleComment', '复制评论', content);
+      this.copyContent = content;
+    },
+    handleZanComment: function handleZanComment(id) {
+      this.handleZan(id);
+    },
+    handleCopy: function handleCopy() {
+      console.log('longtap', this.copyContent);
+      this.msg = this.copyContent;
+    },
+    //-----------------网络请求------------------------------
+    _getSongDetail: function _getSongDetail(ids) {var _this = this;
+      (0, _play.getSongDetail)(ids).then(function (res) {
+        // console.log(res)
+        _this.name = res.data.songs[0].name;
+        _this.avatarUrl1 = res.data.songs[0].al.picUrl;
+        _this.singer = res.data.songs[0].ar[0].name;
+      });
+    },
+    _getComment: function _getComment(id) {var _this2 = this;
+      (0, _play.getComment)(id).then(function (res) {
+        console.log(res.data.comments, '------------------------------------');
+        _this2.total = res.data.total;
+        _this2.newComments = res.data.comments;
+        _this2.comments = res.data.hotComments;
+      });
+    },
+    _getHotComment: function _getHotComment(id) {var _this3 = this;
+      (0, _play.getHotComment)(id, 0).then(function (res) {
+        // console.log(res)
+        _this3.hotComments = res.data.hotComments;
+      });
+    },
+    // 发送评论
+    // t:1 发送；2 回复；0 删除
+    // type:0:歌曲；1：mv;2:歌单；3：专辑；4：电台；5：视频；6：动态
+    // id:对应资源 id
+    // content :要发送的内容
+    // commentId :回复的评论id (回复评论时必填)
+    _getSendComment: function _getSendComment(cookie, t, type, id, content, commentId) {var _this4 = this;
+      (0, _play.getSendComment)(cookie, t, type, id, content, commentId).then(function (res) {
+        console.log(res);
+        if (res.data.code == 200) {
+          _this4.msg = '';
+          _this4.userName = '';
+          uni.showToast({
+            title: '发表成功' });
 
+        } else {
+          uni.showToast({
+            title: '发表失败，请稍后再试',
+            icon: 'none' });
 
+        }
+      });
+    },
+    _getDelComment: function _getDelComment(cookie, t, type, id, commentId) {
+      (0, _play.getDelComment)(cookie, t, type, id, commentId).then(function (res) {
+        // console.log(res,'getDelComment')
+        if (res.data.code == 200) {
+          uni.showToast({
+            title: '删除成功' });
 
-
-  parentCommentId, id, type) {var _this5 = this;
-    (0, _play.getParentComment)(parentCommentId, id, type).then(function (res) {
-      console.log(res, '---------------');
-      _this5.content = res.data.data.ownerComment.content;
-      _this5.avatarUrl = res.data.data.ownerComment.user.avatarUrl;
-      _this5.nickname = res.data.data.ownerComment.user.nickname;
-      _this5.likedCount = res.data.data.ownerComment.likedCount;
-      _this5.reversionComments = res.data.data.comments;
-    });
-  }), _defineProperty(_methods, "_getCommentLike", function _getCommentLike(
-
-
-
-
-
-  cookie, id, cid, t, type) {
-    (0, _play.getCommentLike)(cookie, id, cid, t, type).then(function (res) {
-      console.log(res, '点赞');
-    });
-  }), _methods) };exports.default = _default;
+        }
+      });
+    },
+    // 楼层评论（回复评论）
+    //parentCommentId:楼层评论id
+    // id：资源id
+    // type：0：歌曲，1：MV，2：歌单，3：专辑，4：电台，5：视频
+    _getParentComment: function _getParentComment(parentCommentId, id, type) {var _this5 = this;
+      (0, _play.getParentComment)(parentCommentId, id, type).then(function (res) {
+        console.log(res, '---------------');
+        _this5.content = res.data.data.ownerComment.content;
+        _this5.avatarUrl = res.data.data.ownerComment.user.avatarUrl;
+        _this5.nickname = res.data.data.ownerComment.user.nickname;
+        _this5.likedCount = res.data.data.ownerComment.likedCount;
+        _this5.reversionComments = res.data.data.comments;
+      });
+    },
+    // 点赞评论
+    // id:资源的id
+    // cid:评论的id
+    // t:是否点赞，1 为点赞；0 为取消点赞
+    // type: 0 歌曲；1 MV；2 歌单；3 专辑；4 电台；5 视频；6 动态
+    _getCommentLike: function _getCommentLike(cookie, id, cid, t, type) {
+      (0, _play.getCommentLike)(cookie, id, cid, t, type).then(function (res) {
+        console.log(res, '点赞');
+      });
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
