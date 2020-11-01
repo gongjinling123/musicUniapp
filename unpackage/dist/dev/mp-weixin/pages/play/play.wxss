@@ -380,7 +380,8 @@ infinite:规定动画应该无限次播放
 .round-container{
 	width: 630rpx;
 	height: 630rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -399,7 +400,8 @@ infinite:规定动画应该无限次播放
 .singer-img{
 	width: 580rpx;
 	height: 580rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 }
 .play-foot{
 	width: 750rpx;

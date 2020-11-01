@@ -178,7 +178,8 @@
 }
 .message{
 	width: 100%; 
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box; 
+	        box-sizing: border-box;
 	margin: 0 auto;
 	background-color: #F5F5F5;
 }
@@ -261,7 +262,8 @@
 	width: 100%;
 	height: 100%;
 	margin-top: -5rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 }
 .item-desc{
 	-webkit-box-flex: 1;
@@ -339,7 +341,8 @@
 }
 .last-count text{
 	padding: 10rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	color: #fff;
 	background-color: red;
 }

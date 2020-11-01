@@ -1936,9 +1936,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 107:
-/*!************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/rankList.js ***!
-  \************************************************************************/
+/*!****************************************!*\
+  !*** F:/music-uni/service/rankList.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1954,9 +1954,9 @@ function getTopList() {
 /***/ }),
 
 /***/ 116:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/message.js ***!
-  \***********************************************************************/
+/*!***************************************!*\
+  !*** F:/music-uni/service/message.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2009,9 +2009,9 @@ function getMsg(cookie) {
 /***/ }),
 
 /***/ 149:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/comment.js ***!
-  \***********************************************************************/
+/*!***************************************!*\
+  !*** F:/music-uni/service/comment.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2028,9 +2028,9 @@ function getComment() {
 /***/ }),
 
 /***/ 17:
-/*!********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/find.js ***!
-  \********************************************************************/
+/*!************************************!*\
+  !*** F:/music-uni/service/find.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2053,9 +2053,9 @@ function getHomePage() {
 /***/ }),
 
 /***/ 18:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/network.js ***!
-  \***********************************************************************/
+/*!***************************************!*\
+  !*** F:/music-uni/service/network.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2079,9 +2079,9 @@ function _default(option) {
 /***/ }),
 
 /***/ 182:
-/*!********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/like.js ***!
-  \********************************************************************/
+/*!************************************!*\
+  !*** F:/music-uni/service/like.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2112,9 +2112,9 @@ function getSongDetail(ids) {
 /***/ }),
 
 /***/ 19:
-/*!**********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/config.js ***!
-  \**********************************************************************/
+/*!**************************************!*\
+  !*** F:/music-uni/service/config.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2124,9 +2124,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.BaseURL = 
 /***/ }),
 
 /***/ 191:
-/*!********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/play.js ***!
-  \********************************************************************/
+/*!************************************!*\
+  !*** F:/music-uni/service/play.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3011,13 +3011,11 @@ Dep.SharedObject.targetStack = [];
 function pushTarget (target) {
   Dep.SharedObject.targetStack.push(target);
   Dep.SharedObject.target = target;
-  Dep.target = target;
 }
 
 function popTarget () {
   Dep.SharedObject.targetStack.pop();
   Dep.SharedObject.target = Dep.SharedObject.targetStack[Dep.SharedObject.targetStack.length - 1];
-  Dep.target = Dep.SharedObject.target;
 }
 
 /*  */
@@ -7858,14 +7856,13 @@ function cloneWithData(vm) {
   }, ret);
 
   // vue-composition-api
-  var compositionApiState = vm.__composition_api_state__ || vm.__secret_vfa_state__;
-  var rawBindings = compositionApiState && compositionApiState.rawBindings;
+  var rawBindings = vm.__secret_vfa_state__ && vm.__secret_vfa_state__.rawBindings;
   if (rawBindings) {
     Object.keys(rawBindings).forEach(function (key) {
       ret[key] = vm[key];
     });
   }
-
+  
   //TODO 需要把无用数据处理掉，比如 list=>l0 则 list 需要移除，否则多传输一份数据
   Object.assign(ret, vm.$mp.data || {});
   if (
@@ -8308,9 +8305,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 200:
-/*!**********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/search.js ***!
-  \**********************************************************************/
+/*!**************************************!*\
+  !*** F:/music-uni/service/search.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8337,9 +8334,9 @@ function getSearchKeywords(keywords) {
 /***/ }),
 
 /***/ 249:
-/*!*************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/recommend.js ***!
-  \*************************************************************************/
+/*!*****************************************!*\
+  !*** F:/music-uni/service/recommend.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8359,9 +8356,9 @@ function getRecommend(cookie) {
 /***/ }),
 
 /***/ 258:
-/*!************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/recently.js ***!
-  \************************************************************************/
+/*!****************************************!*\
+  !*** F:/music-uni/service/recently.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8395,9 +8392,9 @@ function getDelete(id, cookie) {
 /***/ }),
 
 /***/ 267:
-/*!************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/register.js ***!
-  \************************************************************************/
+/*!****************************************!*\
+  !*** F:/music-uni/service/register.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8451,9 +8448,9 @@ function Register(phone, password, captcha, nickname) {
 /***/ }),
 
 /***/ 276:
-/*!*********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/login.js ***!
-  \*********************************************************************/
+/*!*************************************!*\
+  !*** F:/music-uni/service/login.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8506,9 +8503,9 @@ function getVerifyCode(phone, captcha) {
 /***/ }),
 
 /***/ 28:
-/*!*********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/video.js ***!
-  \*********************************************************************/
+/*!*************************************!*\
+  !*** F:/music-uni/service/video.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8524,73 +8521,6 @@ function getVideoCategory(cookie) {
 
 
 }
-
-/***/ }),
-
-/***/ 285:
-/*!*****************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/utils/api.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.getAPI = getAPI;var _App = _interopRequireDefault(__webpack_require__(/*! ../App.vue */ 5));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-// method(HTTP 请求方法)，网易云API提供get和post两种请求方式
-var GET = 'GET';
-var POST = 'POST';
-// 定义全局常量baseUrl用来存储前缀
-var baseURL = 'http://neteasecloudmusicapi.zhaoboy.com';
-
-function request(method, url, data) {
-  return new Promise(function (resolve, reject) {
-    var header = {
-      'content-type': 'application/json',
-      'cookie': _App.default.globalData.login_token };
-
-    uni.request({
-      url: baseURL + url,
-      method: method,
-      data: method === POST ? JSON.stringify(data) : data,
-      header: header,
-      success: function success(res) {
-        //请求成功
-        //判断状态码---errCode状态根据后端定义来判断
-        if (res.data.code == 200) {//请求成功
-          resolve(res);
-        } else {
-          //其他异常
-          reject('运行时错误,请稍后再试111');
-        }
-      },
-      fail: function fail(err) {
-        //请求失败
-        reject(err);
-      } });
-
-  });
-}
-
-function getAPI() {
-  var API = {
-    login: function login(data) {return request(GET, "/login/cellphone", data);}, //手机登录
-    getSongDetail: function getSongDetail(data) {return request(GET, "/song/detail", data);}, //获取歌曲详情
-    getSongUrl: function getSongUrl(data) {return request(GET, "/song/url", data);}, //获取歌曲路径
-    getPlaylistAll: function getPlaylistAll() {return request(GET, "/playlist/catlist");}, //全部歌单分类,调用此接口,可获取歌单分类,包含 category 信息
-    getPlaylistHot: function getPlaylistHot() {return request(GET, "/playlist/hot");}, //信息热门歌单分类 ,调用此接口,可获取歌单分类,包含 category 
-    getPlaylist: function getPlaylist(data) {return request(GET, "/top/playlist", data);}, //信息热门歌单分类 ,调用此接口,可获取歌单分类,包含 category 
-    getBanner: function getBanner(data) {return request(GET, "/Banner", data);}, //个性推荐轮播
-    getUserDetail: function getUserDetail(data) {return request(GET, "/user/detail", data);}, //登陆后调用此接口 , 传入用户 id, 可以获取用户详情
-    getUserPlaylist: function getUserPlaylist(data) {return request(GET, "/user/playlist", data);}, // 登陆后调用此接口 , 传入用户 id, 可以获取用户歌单
-    getRecommendSongs: function getRecommendSongs(data) {return request(GET, "/recommend/songs", data);}, // 调用此接口 , 可获得每日推荐歌单 ( 需要登录 )
-    getPlaylistDetail: function getPlaylistDetail(data) {return request(GET, "/playlist/detail", data);}, // 获取歌单详情
-    getHotSongs: function getHotSongs(data) {return request(GET, '/song/url', data);}, // 热搜接口
-    getSearchSuggest: function getSearchSuggest(data) {return request(GET, "/search/suggest", data);}, // 搜索建议接口
-    getSearchResult: function getSearchResult(data) {return request(GET, "/search", data);} // 搜索结果接口
-  };
-  return API;
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
@@ -8626,9 +8556,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 37:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/follows.js ***!
-  \***********************************************************************/
+/*!***************************************!*\
+  !*** F:/music-uni/service/follows.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8660,15 +8590,15 @@ function getRecord(uid, type) {
 
 /***/ }),
 
-/***/ 392:
-/*!**********************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/components/uni-popup/popup.js ***!
-  \**********************************************************************************/
+/***/ 391:
+/*!**************************************************!*\
+  !*** F:/music-uni/components/uni-popup/popup.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 393));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 392));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 // 定义 type 类型:弹出类型：top/bottom/center
 var config = {
   // 顶部弹出
@@ -8696,10 +8626,10 @@ var config = {
 
 /***/ }),
 
-/***/ 393:
-/*!************************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/components/uni-popup/message.js ***!
-  \************************************************************************************/
+/***/ 392:
+/*!****************************************************!*\
+  !*** F:/music-uni/components/uni-popup/message.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8728,9 +8658,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 4:
-/*!***************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/pages.json ***!
-  \***************************************************************/
+/*!*******************************!*\
+  !*** F:/music-uni/pages.json ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8739,9 +8669,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 46:
-/*!*************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/songsList.js ***!
-  \*************************************************************************/
+/*!*****************************************!*\
+  !*** F:/music-uni/service/songsList.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8799,9 +8729,9 @@ function getSongList(ids) {
 /***/ }),
 
 /***/ 63:
-/*!***********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/profile.js ***!
-  \***********************************************************************/
+/*!***************************************!*\
+  !*** F:/music-uni/service/profile.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8866,9 +8796,9 @@ function uploadAvatar(cookie) {
 /***/ }),
 
 /***/ 72:
-/*!*********************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/album.js ***!
-  \*********************************************************************/
+/*!*************************************!*\
+  !*** F:/music-uni/service/album.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8931,9 +8861,9 @@ function getSongsaleboard(albumType, type) {
 /***/ }),
 
 /***/ 81:
-/*!******************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/dj.js ***!
-  \******************************************************************/
+/*!**********************************!*\
+  !*** F:/music-uni/service/dj.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9045,9 +8975,9 @@ function getTopListPay() {
 /***/ }),
 
 /***/ 98:
-/*!************************************************************************!*\
-  !*** C:/Users/Administrator/Desktop/网易云/music-uni/service/playList.js ***!
-  \************************************************************************/
+/*!****************************************!*\
+  !*** F:/music-uni/service/playList.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

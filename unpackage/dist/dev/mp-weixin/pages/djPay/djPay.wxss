@@ -206,7 +206,8 @@
 	height: 250rpx;
 	margin-top: 20rpx;
 	padding-left: 20rpx;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	/* background-color: #007AFF; */
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -220,7 +221,8 @@
 .djPay-img image{
 	width: 100%;
 	height: 100%;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 }
 .djPay-info{
 	-webkit-box-flex: 1;

@@ -214,7 +214,8 @@
 .item-img image{
 	width: 100%;
 	height: 100%;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 }
 .item-info{
 	width: 450rpx;
@@ -259,7 +260,8 @@
 .user-desc image{
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 }
 .user-desc text{
 	max-width: 200rpx;

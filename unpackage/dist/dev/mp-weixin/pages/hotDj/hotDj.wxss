@@ -240,7 +240,8 @@
 	height: 50rpx;
 	text-align: center;
 	margin-top: 15rpx;
-	border-radius: 30rpx;
+	-webkit-border-radius: 30rpx;
+	        border-radius: 30rpx;
 	border: 1rpx solid #ccc;
 }
 .icon-play{
@@ -268,7 +269,8 @@
 .content-item-left{
 	width: 260rpx;
 	height: 280rpx;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 	overflow: hidden;
 	background-color: #333333;
 }

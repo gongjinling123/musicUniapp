@@ -258,7 +258,8 @@
 }
 .default {
 	margin-top: 30rpx;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	font-weight: 500;
 	color: #DD011C;
 }

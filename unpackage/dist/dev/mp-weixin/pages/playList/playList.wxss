@@ -293,7 +293,8 @@
 	top: 450rpx;
 	left: 0;
 	right: 0;
-	border-radius: 30rpx 30rpx 0 0;
+	-webkit-border-radius: 30rpx 30rpx 0 0;
+	        border-radius: 30rpx 30rpx 0 0;
 }
 .play-all-row{
 	width: 96%;
@@ -341,7 +342,8 @@
 }
 .collect text{
 	padding: 10rpx 20rpx;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	color: #fff;
 	background-color: red;
 }

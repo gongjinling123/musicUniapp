@@ -179,7 +179,8 @@
 .song-rankList-row {
 	width: 90%;
 	margin: 20rpx auto;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 	background-color: #fff;
 }
 .rankList-head {
@@ -210,7 +211,8 @@
 	/* border: 1px solid green; */
 	margin-bottom: 10rpx;
 	padding: 15rpx 20rpx;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -222,7 +224,8 @@
 .rankList-img image {
 	width: 120rpx;
 	height: 120rpx;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 }
 .rankList-info {
 	height: 90rpx;

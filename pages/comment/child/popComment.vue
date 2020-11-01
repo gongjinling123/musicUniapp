@@ -35,7 +35,7 @@
 									<image :src="item.user.avatarUrl"></image>
 								</view>
 								<view class="user-name">
-									{{item.user.nickname}}
+									{{item.user.nickname}} 
 								</view>
 								<view class="likedCount" 
 									  @click.stop="handleZan(item.commentId)" 

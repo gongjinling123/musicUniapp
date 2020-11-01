@@ -179,7 +179,8 @@
 .yunComment{
 	width: 100%;
 	height: 100vh;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin: 0 auto;
 }
 .tab{
@@ -250,7 +251,8 @@
 .img image{
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 }
 .nickname{
 	margin: 0 6rpx;

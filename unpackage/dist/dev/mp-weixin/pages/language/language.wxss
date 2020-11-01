@@ -178,7 +178,8 @@
 }
 .language{
 	width: 90%;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin: 0 auto;
 }
 .tab{
@@ -267,7 +268,8 @@
 .item-img image{
 	width: 100%;
 	height: 100%;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 }
 .item-desc{
 	display: -webkit-box;

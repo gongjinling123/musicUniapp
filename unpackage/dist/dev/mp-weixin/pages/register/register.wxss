@@ -202,7 +202,8 @@
 }
 .default{
 	margin-top: 80rpx;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	background-color: #DD011C;
 	color: #fff;
 }

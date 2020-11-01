@@ -179,7 +179,8 @@
 .albumDetail{
 	width: 100%;
 	/* height: 100vh; */
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin: 0 auto;
 	background-color: #1B1B1B;
 	/* background-color: #007AFF; */
@@ -210,7 +211,8 @@
 	width: 400rpx;
 	height: 400rpx;
 	margin: 300rpx auto 0;
-	box-shadow: 0 0 30rpx #fff;
+	-webkit-box-shadow: 0 0 30rpx #fff;
+	        box-shadow: 0 0 30rpx #fff;
 }
 .song-img image{
 	width: 100%;
@@ -259,7 +261,8 @@
 	margin-right: 50rpx;
 	background-color: #D63734;
 	color: #fff;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 }
 .radio{
 	display: -webkit-box;

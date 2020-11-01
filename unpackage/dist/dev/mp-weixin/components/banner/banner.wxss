@@ -1,12 +1,14 @@
 
 .banner{
 	margin-top: 180rpx;
-	border-radius: 15rpx;
+	-webkit-border-radius: 15rpx;
+	        border-radius: 15rpx;
 	overflow: hidden;
 }
 .swiper-banner {
 	height: 250rpx;
-	border-radius: 15rpx;
+	-webkit-border-radius: 15rpx;
+	        border-radius: 15rpx;
 	overflow: hidden;
 	position: relative;
 }
@@ -20,6 +22,7 @@
 	font-size: 22rpx;
 	padding: 6rpx;
 	color: #fff;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 }
 

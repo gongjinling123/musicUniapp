@@ -126,7 +126,8 @@
 	margin: 40rpx auto;
 	font-size: 26rpx;
 	text-align: center;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	display: block;
 	color: #A63D3F;
 	border: 2rpx solid #A63D3F;

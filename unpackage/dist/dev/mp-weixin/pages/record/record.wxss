@@ -266,7 +266,8 @@
 .record-conten{
 	width: 100%;
 	padding-left: 20rpx;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	/* background-color: red; */
 }
 .content-item{

@@ -284,6 +284,8 @@
 		width: 100rpx;
 		border: 2rpx solid #9F6B6B;
 		color: #9F6B6B;
+		text-align: center;
+		font-size: 26rpx;
 		border-radius: 50rpx;
 		padding: 4rpx 12rpx;
 	}

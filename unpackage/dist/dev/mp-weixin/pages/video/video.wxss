@@ -1,7 +1,8 @@
 
 .video{
 	padding-left: 20rpx;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .scroll-view{
 	width: 750rpx;

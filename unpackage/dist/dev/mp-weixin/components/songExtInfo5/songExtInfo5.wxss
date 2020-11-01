@@ -16,7 +16,8 @@
 .title-after {
 	font-size: 24rpx;
 	padding: 10rpx 20rpx;
-	border-radius: 50rpx;
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	border: 1rpx solid #ccc;
 }
 .select-body {
@@ -37,7 +38,8 @@
 .box-img {
 	width: 200rpx;
 	height: 200rpx;
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 }
 .box-title {
 	display: block;

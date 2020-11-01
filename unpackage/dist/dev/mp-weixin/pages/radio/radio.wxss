@@ -242,7 +242,8 @@
 .item-img image{
 	width: 100%;
 	height: 100%;
-	border-radius: 8rpx;
+	-webkit-border-radius: 8rpx;
+	        border-radius: 8rpx;
 }
 .item-name{
 	position: absolute;

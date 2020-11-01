@@ -65,11 +65,41 @@
 		},
 		onLoad() {
 			const cookie=uni.getStorageSync('login_token')
-			this._getRecommend(cookie)
-			this.getDate()
+			this.verification()
 		},
 		methods:{
 			// ----------------事件监听--------------------------
+			//验证用户是否登录
+			verification(){
+				let login_token=uni.getStorageSync('login_token')
+				if(login_token==''){
+					uni.showModal({
+						content:'未登录',
+						confirmColor:'去登陆',
+						cancelColor:'#de655c',
+						confirmColor:'#de655c',
+						showCancel:true,
+						cancelText:'取消',
+						success(res) {
+							if(res.confirm){
+								uni.navigateTo({
+									url:'/pages/login/login'
+								})
+							}else if(res.cancel){
+								uni.navigateTo({
+									url:'/pages/find/find'
+								})
+								app.globalData.navId=2
+							}
+						}
+					})
+				}else{ 
+					this.userId=app.globalData.userId
+					this.login_token=login_token
+					this._getRecommend(cookie)
+					this.getDate()
+				}
+			},
 			handleback(){
 				uni.navigateBack({
 					delta:1

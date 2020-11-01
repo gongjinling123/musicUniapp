@@ -273,7 +273,8 @@ page{
 	height: 180rpx;
 	margin: 220rpx auto 0;
 	padding: 15rpx 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	/* background-color: green; */
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -288,7 +289,8 @@ page{
 .avatar image{
 	width: 120rpx;
 	height: 120rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 }
 .user-name{
 	-webkit-box-flex: 1;
@@ -310,8 +312,10 @@ page{
 	height: 140rpx;
 	margin: 20rpx auto;
 	padding: 20rpx;
-	box-sizing: border-box;
-	border-radius: 20rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 	background-color: #fff;
 	display: -webkit-box;
 	display: -webkit-flex;

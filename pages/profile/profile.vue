@@ -34,9 +34,7 @@
 </template>
 
 <script>
-	import {
-		getAPI
-	} from '../../utils/api.js'
+
 	import {getUserDetail,getUserPlayList,getLike} from '../../service/profile.js'
 	import app from '../../App.vue'
 	
