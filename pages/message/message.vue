@@ -45,6 +45,7 @@
 </template>
 
 <script>
+	import app from '../../App.vue'
 	import {getPrivate,getPrivateMsg} from '../../service/message.js'
 	export default{
 		data(){
